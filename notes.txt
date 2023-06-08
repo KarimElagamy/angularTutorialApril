@@ -1,0 +1,30 @@
+Creting a new angular project   ->  ng new <project_name>
+
+Similarities between C# and Angular
+
+Controller  ->  components
+Views       ->  Templates
+Attributes  ->  Decorators
+Services    ->  Services
+DI          ->  DI
+Routing     ->  Routing
+Filters     ->  Guards
+Middleware  ->  Interceptors
+C#          ->  TypeScript (Same Inventor)
+
+Public: for all the stuff we don't mind other ppl seeing it
+Shared: The different components and models an application will share. Example: data models.
+Core: Header and Footer, Services, Routes, Guards.
+
+Decorator -> used to provide metadata to a class, method, accessor, property, or parameter. 
+    And we apply it using the @expression. For example: @component, @injectable.
+
+@NgModule is a decorator that defines the class as an angular module and adds the required metadata to it.
+
+@injectable has two purposes:
+    One is it instructs angular that this class needs a dependency
+    Two is using the providedIn we inform the dependency injection system how to provide the service.
+
+
+Interview Question: Is lazy always used by default. No, for small applciatons that only has some components, no need to use it.
+

@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+#page-content {
+    flex: 1 0 auto;
+}
+
+html,
+body {
+    height: 100%;
+    background-color: #f9f5f5;
+}
+
+#page-content {
+    flex: 1 0 auto;
+}
