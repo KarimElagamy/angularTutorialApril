@@ -1,3 +1,3 @@
 export const environment = {
-    subscriptionKey: '8ab900c3d6614465b6bd6f361174c510',
+    subscriptionKey: '77d8cd885d0841eb97616dafe0b4d0da',
 };

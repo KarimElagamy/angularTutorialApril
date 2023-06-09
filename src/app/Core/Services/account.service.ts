@@ -23,13 +23,13 @@ export class AccountService {
   constructor(private http:HttpClient) { }
 
   Register(registerData:Register):Observable<boolean> {
-    return this.http.post<boolean>("https://hrm2023apigateway.azure-api.net/recruiting/api/Account/Register", registerData, {
+    return this.http.post<boolean>("https://mvcapigateway.azure-api.net/authentication/api/Account/Register", registerData, {
       headers: {'Ocp-Apim-Subscription-Key':environment.subscriptionKey}
     });
   }
 
   Login(loginData:Login):Observable<boolean>{
-    return this.http.post<boolean>("https://hrm2023apigateway.azure-api.net/recruiting/api/Account/Login", loginData, {
+    return this.http.post<boolean>("https://mvcapigateway.azure-api.net/authentication/api/Account/Login", loginData, {
       headers: {'Ocp-Apim-Subscription-Key':environment.subscriptionKey}
     }).pipe(map((response: any) => {
       if (response){

@@ -10,7 +10,7 @@ import { HomeComponent } from './Public/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { JwtAdderInterceptor } from './Core/Interceptors/jwt-adder.interceptor';
-
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -19,16 +19,17 @@ import { JwtAdderInterceptor } from './Core/Interceptors/jwt-adder.interceptor';
     HomeComponent
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
+    BrowserModule,
     CoreModule,
     SharedModule,
     NgbModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: JwtAdderInterceptor, multi: true}
+    { provide: HTTP_INTERCEPTORS, useClass: JwtAdderInterceptor, multi: true},
   ],
   bootstrap: [AppComponent]
 })
